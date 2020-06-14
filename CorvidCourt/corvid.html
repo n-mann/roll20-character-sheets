@@ -1,0 +1,173 @@
+<input type="radio" name="attr_class" style="display:none;" value="jay"/>
+<input type="radio" name="attr_class" style="display:none;" value="crow" checked="true"/>
+<input type="radio" name="attr_class" style="display:none;" value="raven"/>
+<input type="radio" name="attr_class" style="display:none;" value="magpie"/>
+
+<div id="everything" style="position:relative;min-width:650px;">
+  <select name="attr_class" class="class">
+    <option value="crow">Crow</option>
+    <option value="jay">Jay</option>
+    <option value="magpie">Magpie</option>
+    <option value="raven">Raven</option>
+  </select>
+
+  <div class="buttons">
+    <button type="roll" value="&{template:roll} {{rolltitle=ROLLING 1 DIE}} {{rollresult=[[1d6cf<3k1]]}}" name="Single_Die">
+      <img src="https://i.imgur.com/Lr0BhKz.png"/>
+    </button>
+    <button type="roll" value="&{template:roll} {{rolltitle=ROLLING 2 DICE}} {{rollresult=[[2d6cf<3k1]]}}" name="Two_Dice">
+      <img src="https://i.imgur.com/Fi90WgH.png"/>
+    </button>
+    <button type="roll" value="&{template:roll} {{rolltitle=ROLLING 3 DICE}} {{rollresult=[[3d6cf<3k1]]}}" name="Three_Dice">
+      <img src="https://i.imgur.com/5CSwUBl.png"/>
+    </button>
+    <button type="roll" value="&{template:roll} {{rolltitle=ROLLING ?{How many dice?} DICE}} {{rollresult=[[?{How many dice?}d6cf<3k1]]}}" name="Multiple_Dice">
+      <img src="https://i.imgur.com/INGXX9K.png"/>
+    </button>
+  </div>
+
+  <div class="line-field">
+    <span class="title-text">Name: <input type="text" name="attr_character_name"/></span><br>
+    <span class="title-text">Look: <input type="text" name="attr_looks"/></span>
+  </div>
+
+  <div class="class-icon">
+    <img class="crow-only" src="https://i.imgur.com/cWXM0lM.png"/>
+    <img class="raven-only" src="https://i.imgur.com/xezvkEd.png"/>
+    <img class="jay-only" src="https://i.imgur.com/m16p6Y8.png"/>
+    <img class="magpie-only" src="https://i.imgur.com/NuEZzGA.png"/>
+  </div>
+
+  <div class="skills-div">
+    <span class="title-text">SKILLS</span><br>
+    Caw <input type="checkbox" name="attr_caw"/><br>
+    Murder <input type="checkbox" name="attr_murder"/><br>
+    Spy <input type="checkbox" name="attr_observe"/><br>
+    Swoop <input type="checkbox" name="attr_swoop"/><br>
+  </div>
+
+  <div class="domains-div">
+    <span class="title-text">DOMAINS</span><br>
+    Crime <input type="checkbox" name="attr_crime"/><br>
+    Coin <input type="checkbox" name="attr_coin"/><br>
+    Occult <input type="checkbox" name="attr_occult"/><br>
+    Tech <input type="checkbox" name="attr_tech"/><br>
+  </div>
+
+  <div class="main-div">
+    <div class="abilities-div">
+      <p><span class="title-text">ABILITIES</span></p>
+      
+      <p>
+        <input type="checkbox" name="attr_ability_1"/>
+        <span class="crow-only">Once per session, you may engulf someone in crows, devouring them.</span>
+        <span class="raven-only">You don’t check for Fallout until you have at least 3 stress in a track.</span>
+        <span class="jay-only">Those who can hear your Caw will follow one word commands from you.</span>
+        <span class="magpie-only">When someone takes a coin from you, they must obey a single word command you give them.</span>
+      </p>
+      
+      <p>
+        <input type="checkbox" name="attr_ability_2"/>
+        <span class="crow-only">Once per scene you may act with supernatural speed and strength. Doing so again that scene costs 1 Claw stress.</span>
+        <span class="raven-only">All doors unlock with your touch. Doors may also be locked so only you may pass.</span>
+        <span class="jay-only">Once per session mask your face and voice to match someone who you have seen and heard.</span>
+        <span class="magpie-only">When you acquire a trinket from someone, you can always track their location.</span>
+      </p>
+      
+      <p>
+        <input type="checkbox" name="attr_ability_3"/>
+        <span class="crow-only">When you harm someone, any witnesses will flee in terror or be paralyzed by fear, your choice.</span>
+        <span class="raven-only">When you take Claw stress, burst into a cloud of ravens and reform somewhere within eyesight.</span>
+        <span class="jay-only">When you Caw with mad jabbering, choose an effect on those who can hear: madness, pain, paralysis.</span>
+        <span class="magpie-only">Once per scene you may appear anywhere you can see. Describe how you got there.</span>
+      </p>
+    </div>
+    
+    <div class="advances-div">
+      <p><span class="title-text">ADVANCES</span>
+      <p><input type="checkbox" name="attr_advance_1"/>Gain an Ability</p>
+      <p><input type="checkbox" name="attr_advance_2"/>Gain an Ability</p>
+      <p><input type="checkbox" name="attr_advance_3"/>Gain a Domain</p>
+      <p><input type="checkbox" name="attr_advance_4"/>Gain a Skill</p>
+      <p><input type="checkbox" name="attr_advance_5"/>
+        <span class="crow-only">+1 die when using Murder</span>
+        <span class="raven-only">+1 die when using Spy</span>
+        <span class="jay-only">+1 die when using Caw</span>
+        <span class="magpie-only">+1 die when using Swoop</span>
+      </p>
+    </div>
+    
+    <div class="equipment-div">
+      <span class="title-text">EQUIPMENT</span><br>
+      - <input type="text" name="attr_equipment_1"/><br>
+      - <input type="text" name="attr_equipment_2"/><br>
+      - <input type="text" name="attr_equipment_3"/><br>
+    </div>
+    
+    <div class="refresh-div">
+      <span class="title-text">REFRESH</span><br>
+      <span class="crow-only">Destroy a symbol of opposition from one of the Court’s foes.</span>
+      <span class="raven-only">Discover a secret that will benefit the Corvid Court.</span>
+      <span class="jay-only">Spread fear of the Corvid Court to those who think themselves immune to it.</span>
+      <span class="magpie-only">Acquire someone’s cherished belonging to fill the Corvid Court’s coffers.</span>
+    </div>
+  </div>
+
+  <div class="resistances">
+    <table>
+      <tr><td class="title-text" colspan="2">RESISTANCES</td></tr>
+      <tr>
+        <td>Claw</td>
+        <td>
+          <input type="radio" value="0" name="attr_claw_stress" checked="true"/>
+          <input type="radio" value="1" name="attr_claw_stress"/><div></div>
+          <input type="radio" value="2" name="attr_claw_stress"/><div></div>
+          <input type="radio" value="3" name="attr_claw_stress"/><div></div>
+          <input type="radio" value="4" name="attr_claw_stress"/><div></div>
+          <input type="radio" value="5" name="attr_claw_stress"/><div></div>
+          <input type="radio" value="6" name="attr_claw_stress"/><div></div>
+          <img src="https://cdn2.iconfinder.com/data/icons/dark-action-bar-2/96/refresh-512.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Eye</td>
+        <td>
+          <input type="radio" value="0" name="attr_eye_stress" checked="true"/>
+          <input type="radio" value="1" name="attr_eye_stress"/><div></div>
+          <input type="radio" value="2" name="attr_eye_stress"/><div></div>
+          <input type="radio" value="3" name="attr_eye_stress"/><div></div>
+          <input type="radio" value="4" name="attr_eye_stress"/><div></div>
+          <input type="radio" value="5" name="attr_eye_stress"/><div></div>
+          <input type="radio" value="6" name="attr_eye_stress"/><div></div>
+          <img src="https://cdn2.iconfinder.com/data/icons/dark-action-bar-2/96/refresh-512.png"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Beak</td>
+        <td>
+          <input type="radio" value="0" name="attr_beak_stress" checked="true"/>
+          <input type="radio" value="1" name="attr_beak_stress"/><div></div>
+          <input type="radio" value="2" name="attr_beak_stress"/><div></div>
+          <input type="radio" value="3" name="attr_beak_stress"/><div></div>
+          <input type="radio" value="4" name="attr_beak_stress"/><div></div>
+          <input type="radio" value="5" name="attr_beak_stress"/><div></div>
+          <input type="radio" value="6" name="attr_beak_stress"/><div></div>
+          <img src="https://cdn2.iconfinder.com/data/icons/dark-action-bar-2/96/refresh-512.png"/>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="fallout-div">
+    <span class="title-text">FALLOUT</span>
+    <textarea name="attr_fallout"></textarea>
+  </div>
+
+</div>
+
+<rolltemplate class="sheet-rolltemplate-roll">
+  <div class="roll">
+    <span class="title-text">{{rolltitle}}</span>
+    {{rollresult}}: {{#rollWasFumble() rollresult}}Failure{{/rollWasFumble() rollresult}}{{#^rollWasFumble() rollresult}}Success{{#^rollWasCrit() rollresult}}, with consequences{{/^rollWasCrit() rollresult}}{{/^rollWasFumble() rollresult}}
+  </div>
+</rolltemplate>

@@ -1,0 +1,232 @@
+input[value=crow]:not(:checked) ~ div .sheet-crow-only,
+input[value=raven]:not(:checked) ~ div .sheet-raven-only,
+input[value=jay]:not(:checked) ~ div .sheet-jay-only,
+input[value=magpie]:not(:checked) ~ div .sheet-magpie-only {
+  display: none;
+}
+
+.sheet-title-text {
+  font-weight: bolder;
+  /* font-family: */
+}
+
+select.sheet-class {
+  font-family: impact;
+  font-size: 40px;
+  height: 60px;
+  width: auto;
+  border: none;
+  position: absolute;
+}
+
+div.sheet-buttons {
+  position: absolute;
+  left: 200px;
+  width: calc(100% - 360px);
+  top: 20px;
+}
+.sheet-buttons img,
+.sheet-buttons button {
+  position: relative;
+  padding: 0!important;
+  margin: 0!important;
+  border: 0;
+}
+.sheet-buttons img {
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
+}
+.sheet-buttons button {
+  width: 50px;
+  height: 50px;
+  margin-right: calc((100% - 220px) / 3)!important;
+}
+.sheet-buttons button:last-of-type {
+  margin-right: 0!important;
+}
+.sheet-buttons button:before {
+  content: none!important;
+}
+
+div.sheet-line-field {
+  position: absolute;
+  padding: 8px;
+  top: 85px;
+  left: 0;
+  right: 200px;
+}
+div.sheet-line-field input[type=text] {
+  left: 0;
+  width: calc(100% - 50px);
+  border: none;
+  padding-top: 1px;
+}
+
+div.sheet-class-icon {
+  width: 150px;
+  height: 150px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sheet-class-icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.sheet-skills-div {
+  top: 180px;
+  width: 120px;
+  position: absolute;
+}
+
+.sheet-domains-div {
+  top: 300px;
+  width: 120px;
+  position: absolute;
+}
+
+
+.sheet-skills-div input,
+.sheet-domains-div input {
+  right: 0;
+  position: absolute;
+}
+
+.sheet-main-div {
+  top: 170px;
+  left: 150px;
+  width: calc(100% - 150px);
+  height: 270px;
+  position: absolute;
+  border: 3px solid black;
+}
+.sheet-main-div div {
+  padding-top: 2px;
+}
+.sheet-main-div p {
+  margin-bottom: 5px;
+}
+.sheet-abilities-div {
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  height: 150px;
+  width: 70%;
+  padding-left: 5px;
+}
+.sheet-advances-div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-bottom: 3px solid black;
+  height: 150px;
+  width: calc(30% - 11px);
+  padding-left: 8px;
+}
+.sheet-equipment-div {
+  position: absolute;
+  top: 153px;
+  left: 0;
+  border-right: 3px solid black;
+  height: 115px;
+  width: 50%;
+  padding-top: 5px!important;
+  padding-left: 5px;
+}
+.sheet-equipment-div input {
+  border: none;
+  border-bottom: 1px gray dotted;
+  width: calc(100% - 10px - 2em);
+}
+.sheet-refresh-div {
+  position: absolute;
+  top: 153px;
+  right: 0;
+  height: 117px;
+  padding-top: 5px!important;
+  padding-left: 8px;
+  width: calc(50% - 11px);
+}
+
+div.sheet-resistances {
+  position: absolute;
+  top: 420px;
+  width: 375px;
+}
+div.sheet-resistances table {
+  width: 100%;
+}
+div.sheet-resistances td {
+  vertical-align: middle;
+  text-align: right;
+  padding-left: 10px;
+}
+div.sheet-resistances td:first-of-type {
+  text-align: left;
+  padding-left: 0;
+  padding-top: 8px;
+}
+div.sheet-resistances div,
+div.sheet-resistances img {
+  border: 1px solid black;
+  left: -26px;
+  top: 10px;
+}
+div.sheet-resistances img {
+  border: none;
+  top: 0;
+  margin-left: 5px;
+}
+div.sheet-resistances div {
+  background-color: gray;
+}
+div.sheet-resistances div,
+div.sheet-resistances img,
+div.sheet-resistances input[type=radio] {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  display: inline-block;
+}
+div.sheet-resistances input[type=radio]:checked ~ input[type=radio] + div {
+  background-color: white;
+}
+div.sheet-resistances input[type=radio] {
+  opacity: 0;
+  z-index: 1;
+  margin-left: -20px;
+}
+div.sheet-resistances input[type=radio]:first-of-type {
+  left: 223px;
+}
+
+.sheet-fallout-div {
+  top: 450px;
+  position: absolute;
+  left: 360px;
+  height: 100px;
+  width : calc(100% - 365px);
+  border: 3px solid black;
+  padding-left: 5px;
+}
+
+.sheet-fallout-div textarea {
+  position: absolute;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  margin: 0;
+  padding: 0;
+  height: calc(100% - 2em);
+  width: calc(100% - 10px);
+  border: none;
+}
+
+.sheet-roll {
+  border: 3px solid black;
+  background: white;
+  width: 100%;
+}
