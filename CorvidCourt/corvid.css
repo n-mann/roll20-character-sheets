@@ -5,14 +5,24 @@ input[value=magpie]:not(:checked) ~ div .sheet-magpie-only {
   display: none;
 }
 
+@font-face {
+  font-family: gearedSlab;
+  src: url(https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/fonts/GearedSlab.ttf);
+}
+
+@font-face {
+  font-family: plantin;
+  src: url(https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/fonts/Plantin.ttf);
+}
+
 .sheet-title-text {
-  font-weight: bolder;
-  /* font-family: */
+  font-family: gearedSlab;
+  font-size: 16px;
 }
 
 select.sheet-class {
-  font-family: impact;
-  font-size: 40px;
+  font-family: gearedSlab;
+  font-size: 46px;
   height: 60px;
   width: auto;
   border: none;
@@ -55,12 +65,15 @@ div.sheet-line-field {
   top: 85px;
   left: 0;
   right: 200px;
+  font-size: 18px;
 }
 div.sheet-line-field input[type=text] {
   left: 0;
   width: calc(100% - 50px);
   border: none;
-  padding-top: 1px;
+  padding-top: 3px;
+  font-size: 14px;
+  font-family: plantin;
 }
 
 div.sheet-class-icon {
@@ -81,12 +94,16 @@ div.sheet-class-icon {
   top: 180px;
   width: 120px;
   position: absolute;
+  font-family: plantin;
+  font-size: 14px;
 }
 
 .sheet-domains-div {
   top: 300px;
   width: 120px;
   position: absolute;
+  font-family: plantin;
+  font-size: 14px;
 }
 
 
@@ -103,12 +120,16 @@ div.sheet-class-icon {
   height: 270px;
   position: absolute;
   border: 3px solid black;
+  font-family: plantin;
+  font-size: 14px;
 }
 .sheet-main-div div {
   padding-top: 2px;
 }
 .sheet-main-div p {
   margin-bottom: 5px;
+  font-family: plantin;
+  font-size: 14px;
 }
 .sheet-abilities-div {
   border-right: 3px solid black;
@@ -133,7 +154,7 @@ div.sheet-class-icon {
   border-right: 3px solid black;
   height: 115px;
   width: 50%;
-  padding-top: 5px!important;
+  padding-top: 3px!important;
   padding-left: 5px;
 }
 .sheet-equipment-div input {
@@ -146,7 +167,7 @@ div.sheet-class-icon {
   top: 153px;
   right: 0;
   height: 117px;
-  padding-top: 5px!important;
+  padding-top: 3px!important;
   padding-left: 8px;
   width: calc(50% - 11px);
 }
@@ -158,6 +179,8 @@ div.sheet-resistances {
 }
 div.sheet-resistances table {
   width: 100%;
+  font-family: plantin;
+  font-size: 16px;
 }
 div.sheet-resistances td {
   vertical-align: middle;
@@ -210,6 +233,7 @@ div.sheet-resistances input[type=radio]:first-of-type {
   height: 100px;
   width : calc(100% - 365px);
   border: 3px solid black;
+  padding-top: 3px;
   padding-left: 5px;
 }
 
@@ -220,13 +244,37 @@ div.sheet-resistances input[type=radio]:first-of-type {
   bottom: 5px;
   margin: 0;
   padding: 0;
-  height: calc(100% - 2em);
+  height: calc(100% - 2.5em);
   width: calc(100% - 10px);
   border: none;
+  font-family: plantin;
 }
 
-.sheet-roll {
+.sheet-rolltemplate-roll p.sheet-title-text {
+  font-weight: bolder;
+  border-bottom: 1px solid black;
+  padding-left: 3px;
+  padding-top: 3px;
+  margin-bottom: 6px;
+  width: 100%;
+  font-family: gearedSlab;
+  font-size: 16px;
+}
+.sheet-rolltemplate-roll p:last-of-type {
+  margin-bottom: 2px;
+  text-align: center;
+  font-family: plantin;
+}
+.sheet-rolltemplate-roll div {
   border: 3px solid black;
   background: white;
-  width: 100%;
+  padding-bottom: 3px;
+  width: 95%;
+}
+.sheet-rolltemplate-roll div > span {
+  text-align: center;
+}
+.sheet-rolltemplate-roll span.inlinerollresult {
+  border: 2px solid black;
+  background-color: lightgray!important;
 }
