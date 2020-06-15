@@ -12,16 +12,16 @@
   </select>
 
   <div class="buttons">
-    <button type="roll" value="&{template:roll} {{rolltitle=ROLLING 1 DIE}} {{rollresult=[[1d6cf<3k1]]}}" name="Single_Die">
+    <button type="roll" value="&{template:roll} {{name=@{character_name}}} {{rolltitle=ROLLING 1 DIE}} {{rollresult=[[1d6cf<3k1]]}}" name="roll_Single_Die">
       <img src="https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/assets/dice_1.png"/>
     </button>
-    <button type="roll" value="&{template:roll} {{rolltitle=ROLLING 2 DICE}} {{rollresult=[[2d6cf<3k1]]}}" name="Two_Dice">
+    <button type="roll" value="&{template:roll} {{name=@{character_name}}} {{rolltitle=ROLLING 2 DICE}} {{rollresult=[[2d6cf<3k1]]}}" name="roll_Two_Dice">
       <img src="https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/assets/dice_2.png"/>
     </button>
-    <button type="roll" value="&{template:roll} {{rolltitle=ROLLING 3 DICE}} {{rollresult=[[3d6cf<3k1]]}}" name="Three_Dice">
+    <button type="roll" value="&{template:roll} {{name=@{character_name}}} {{rolltitle=ROLLING 3 DICE}} {{rollresult=[[3d6cf<3k1]]}}" name="roll_Three_Dice">
       <img src="https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/assets/dice_3.png"/>
     </button>
-    <button type="roll" value="&{template:roll} {{rolltitle=ROLLING ?{How many dice?} DICE}} {{rollresult=[[?{How many dice?}d6cf<3k1]]}}" name="Multiple_Dice">
+    <button type="roll" value="&{template:roll} {{name=@{character_name}}} {{rolltitle=ROLLING ?{How many dice?} DICE}} {{rollresult=[[?{How many dice?}d6cf<3k1]]}}" name="roll_Multiple_Dice">
       <img src="https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/assets/dice_p.png"/>
     </button>
   </div>
@@ -56,35 +56,59 @@
 
   <div class="main-div">
     <div class="abilities-div">
-      <p><span class="title-text">ABILITIES</span></p>
+      <p class="title-text">ABILITIES</p>
       
       <p>
         <input type="checkbox" name="attr_ability_1"/>
-        <span class="crow-only">Once per session, you may engulf someone in crows, devouring them.</span>
-        <span class="raven-only">You don’t check for Fallout until you have at least 3 stress in a track.</span>
-        <span class="jay-only">Those who can hear your Caw will follow one word commands from you.</span>
-        <span class="magpie-only">When someone takes a coin from you, they must obey a single word command you give them.</span>
+        <button class="crow-only" type="roll" value="&{template:ability} {{ability=Once per session, you may engulf someone in crows, devouring them.}} {{name=@{character_name}}} {{useable=@{ability_1}}}">
+          Once per session, you may engulf someone in crows, devouring them.
+        </button>
+        <button class="raven-only" type="roll" value="&{template:ability} {{ability=You don’t check for Fallout until you have at least 3 stress in a track.}} {{name=@{character_name}}} {{useable=@{ability_1}}}">
+          You don’t check for Fallout until you have at least 3 stress in a track.
+        </button>
+        <button class="jay-only" type="roll" value="&{template:ability} {{ability=Those who can hear your Caw will follow one word commands from you.}} {{name=@{character_name}}} {{useable=@{ability_1}}}">
+          Those who can hear your Caw will follow one word commands from you.
+        </button>
+        <button class="magpie-only" type="roll" value="&{template:ability} {{ability=When someone takes a coin from you, they must obey a single word command you give them.}} {{name=@{character_name}}} {{useable=@{ability_1}}}">
+          When someone takes a coin from you, they must obey a single word command you give them.
+        </button>
       </p>
       
       <p>
         <input type="checkbox" name="attr_ability_2"/>
-        <span class="crow-only">Once per scene you may act with supernatural speed and strength. Doing so again that scene costs 1 Claw stress.</span>
-        <span class="raven-only">All doors unlock with your touch. Doors may also be locked so only you may pass.</span>
-        <span class="jay-only">Once per session mask your face and voice to match someone who you have seen and heard.</span>
-        <span class="magpie-only">When you acquire a trinket from someone, you can always track their location.</span>
+        <button class="crow-only" type="roll" value="&{template:ability} {{ability=Once per scene you may act with supernatural speed and strength. Doing so again that scene costs 1 Claw stress.}} {{name=@{character_name}}} {{useable=@{ability_2}}}">
+          Once per scene you may act with supernatural speed and strength. Doing so again that scene costs 1 Claw stress.
+        </button>
+        <button class="raven-only" type="roll" value="&{template:ability} {{ability=All doors unlock with your touch. Doors may also be locked so only you may pass.}} {{name=@{character_name}}} {{useable=@{ability_2}}}">
+          All doors unlock with your touch. Doors may also be locked so only you may pass.
+        </button>
+        <button class="jay-only" type="roll" value="&{template:ability} {{ability=Once per session mask your face and voice to match someone who you have seen and heard.}} {{name=@{character_name}}} {{useable=@{ability_2}}}">
+          Once per session mask your face and voice to match someone who you have seen and heard.
+        </button>
+        <button class="magpie-only" type="roll" value="&{template:ability} {{ability=When you acquire a trinket from someone, you can always track their location.}} {{name=@{character_name}}} {{useable=@{ability_2}}}">
+          When you acquire a trinket from someone, you can always track their location.
+        </button>
       </p>
       
       <p>
         <input type="checkbox" name="attr_ability_3"/>
-        <span class="crow-only">When you harm someone, any witnesses will flee in terror or be paralyzed by fear, your choice.</span>
-        <span class="raven-only">When you take Claw stress, burst into a cloud of ravens and reform somewhere within eyesight.</span>
-        <span class="jay-only">When you Caw with mad jabbering, choose an effect on those who can hear: madness, pain, paralysis.</span>
-        <span class="magpie-only">Once per scene you may appear anywhere you can see. Describe how you got there.</span>
+        <button class="crow-only" type="roll" value="&{template:ability} {{ability=When you harm someone, any witnesses will flee in terror or be paralyzed by fear, your choice.}} {{name=@{character_name}}} {{useable=@{ability_3}}}">
+          When you harm someone, any witnesses will flee in terror or be paralyzed by fear, your choice.
+        </button>
+        <button class="raven-only" type="roll" value="&{template:ability} {{ability=When you take Claw stress, burst into a cloud of ravens and reform somewhere within eyesight.}} {{name=@{character_name}}} {{useable=@{ability_3}}}">
+          When you take Claw stress, burst into a cloud of ravens and reform somewhere within eyesight.
+        </button>
+        <button class="jay-only" type="roll" value="&{template:ability} {{ability=When you Caw with mad jabbering, choose an effect on those who can hear: madness, pain, paralysis.}} {{name=@{character_name}}} {{useable=@{ability_3}}}">
+          When you Caw with mad jabbering, choose an effect on those who can hear: madness, pain, paralysis.
+        </button>
+        <button class="magpie-only" type="roll" value="&{template:ability} {{ability=Once per scene you may appear anywhere you can see. Describe how you got there.}} {{name=@{character_name}}} {{useable=@{ability_3}}}">
+          Once per scene you may appear anywhere you can see. Describe how you got there.
+        </button>
       </p>
     </div>
     
     <div class="advances-div">
-      <p><span class="title-text">ADVANCES</span>
+      <p class="title-text">ADVANCES</p>
       <p><input type="checkbox" name="attr_advance_1"/> Gain an Ability</p>
       <p><input type="checkbox" name="attr_advance_2"/> Gain an Ability</p>
       <p><input type="checkbox" name="attr_advance_3"/> Gain a Domain</p>
@@ -98,18 +122,26 @@
     </div>
     
     <div class="equipment-div">
-      <span class="title-text">EQUIPMENT</span><br>
+      <p class="title-text">EQUIPMENT</p>
       - <input type="text" name="attr_equipment_1"/><br>
       - <input type="text" name="attr_equipment_2"/><br>
       - <input type="text" name="attr_equipment_3"/><br>
     </div>
     
     <div class="refresh-div">
-      <span class="title-text">REFRESH</span><br>
-      <span class="crow-only">Destroy a symbol of opposition from one of the Court’s foes.</span>
-      <span class="raven-only">Discover a secret that will benefit the Corvid Court.</span>
-      <span class="jay-only">Spread fear of the Corvid Court to those who think themselves immune to it.</span>
-      <span class="magpie-only">Acquire someone’s cherished belonging to fill the Corvid Court’s coffers.</span>
+      <p class="title-text">REFRESH</p>
+      <button class="crow-only" type="roll" value="&{template:refresh} {{value=[[d6cs0cf0]]}} {{name=@{character_name}}} {{track=?{Select Track|Claw|Eye|Beak}}} {{condition=Destroy a symbol of opposition from one of the Court’s foes.}}">
+        Destroy a symbol of opposition from one of the Court’s foes.
+      </button>
+      <button class="raven-only" type="roll" value="&{template:refresh} {{value=[[d6cs0cf0]]}} {{name=@{character_name}}} {{track=?{Select Track|Claw|Eye|Beak}}} {{condition=Discover a secret that will benefit the Corvid Court.}}">
+        Discover a secret that will benefit the Corvid Court.
+      </button>
+      <button class="jay-only" type="roll" value="&{template:refresh} {{value=[[d6cs0cf0]]}} {{name=@{character_name}}} {{track=?{Select Track|Claw|Eye|Beak}}} {{condition=Spread fear of the Corvid Court to those who think themselves immune to it.}}">
+        <p>Spread fear of the Corvid Court to those who think themselves immune to it.</p>
+      </button>
+      <button class="magpie-only" type="roll" value="&{template:refresh} {{value=[[d6cs0cf0]]}} {{name=@{character_name}}} {{track=?{Select Track|Claw|Eye|Beak}}} {{condition=Acquire someone’s cherished belonging to fill the Corvid Court’s coffers.}}">
+        <p>Acquire someone’s cherished belonging to fill the Corvid Court’s coffers.</p>
+      </button>
     </div>
   </div>
 
@@ -126,7 +158,7 @@
           <input type="radio" value="4" name="attr_claw_stress"/><div></div>
           <input type="radio" value="5" name="attr_claw_stress"/><div></div>
           <input type="radio" value="6" name="attr_claw_stress"/><div></div>
-          <img src="https://cdn2.iconfinder.com/data/icons/dark-action-bar-2/96/refresh-512.png"/>
+          <img src="https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/assets/refresh.png"/>
         </td>
       </tr>
       <tr>
@@ -139,7 +171,7 @@
           <input type="radio" value="4" name="attr_eye_stress"/><div></div>
           <input type="radio" value="5" name="attr_eye_stress"/><div></div>
           <input type="radio" value="6" name="attr_eye_stress"/><div></div>
-          <img src="https://cdn2.iconfinder.com/data/icons/dark-action-bar-2/96/refresh-512.png"/>
+          <img src="https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/assets/refresh.png"/>
         </td>
       </tr>
       <tr>
@@ -152,7 +184,7 @@
           <input type="radio" value="4" name="attr_beak_stress"/><div></div>
           <input type="radio" value="5" name="attr_beak_stress"/><div></div>
           <input type="radio" value="6" name="attr_beak_stress"/><div></div>
-          <img src="https://cdn2.iconfinder.com/data/icons/dark-action-bar-2/96/refresh-512.png"/>
+          <img src="https://raw.githubusercontent.com/n-mann/roll20-character-sheets/master/CorvidCourt/assets/refresh.png"/>
         </td>
       </tr>
     </table>
@@ -167,7 +199,22 @@
 
 <rolltemplate class="sheet-rolltemplate-roll">
   <div>
-    <p class="sheet-title-text">{{rolltitle}}</p>
+    <p class="sheet-title-text">{{name}}: {{rolltitle}}</p>
     <p>{{rollresult}}: {{#rollWasFumble() rollresult}}Failure{{/rollWasFumble() rollresult}}{{#^rollWasFumble() rollresult}}Success{{#^rollWasCrit() rollresult}}, with consequences{{/^rollWasCrit() rollresult}}{{/^rollWasFumble() rollresult}}</p>
+  </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-refresh">
+  <div>
+    <p class="sheet-title-text">{{name}}: REFRESH</p>
+    <p class="sheet-italic"><i>{{condition}}</i></p>
+    <p>{{track}} track refreshes for {{value}}</p>
+  </div>
+</rolltemplate>
+
+<rolltemplate class="sheet-rolltemplate-ability">
+  <div>
+    <p class="sheet-title-text">{{name}}: ABILITY USE</p>
+    <p>{{ability}}</p>
   </div>
 </rolltemplate>
