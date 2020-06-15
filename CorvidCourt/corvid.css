@@ -126,7 +126,6 @@ div.sheet-class-icon {
   padding-top: 2px;
 }
 .sheet-main-div p {
-  margin-bottom: 5px;
   font-family: plantin;
   font-size: 14px;
   vertical-align: top;
@@ -179,6 +178,9 @@ div.sheet-class-icon {
   height: 150px;
   width: calc(30% - 11px);
   padding-left: 8px;
+}
+.sheet-advances-div p {
+  margin-bottom: 5px;
 }
 .sheet-equipment-div {
   position: absolute;
